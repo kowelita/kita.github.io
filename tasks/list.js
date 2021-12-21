@@ -27,26 +27,9 @@ $(window).on('load', function(){
                             team = team + '<a href="https://t.me/'+ member.link +'">'+ member.name +'</a>, ';
                         }
                         team = team.substring(0, team.length -2);
-                        $("#list").append('<div class="col-md-6 col-xs-12 p-md-5 p-2 py-5"><p class="color-primary font-weight-bold">'+value.title+'</p><p class="color-grey small">'+value.description+'</p><p class="color-primary small font-weight-bold">Team: '+ team +'</p></div>');
+                        $("#list").append('<div class="col-md-6 col-xs-12 p-md-5 p-2 py-5"><p class="color-primary font-weight-bold">'+value.title+'</p><p class="color-grey small">'+value.description+'</p></div>');
                     }
                 });
-                // $.each(active, function (index, value) {
-                //     let team = '';
-                //     for (let member of value.team) {
-                //         team = team + '<a href="https://t.me/'+ member.link +'">'+ member.name +'</a>, ';
-                //     }
-                //     team = team.substring(0, team.length -2);
-                //     $("#list").append('<div class="col-md-6 col-xs-12 p-5"><p class="color-primary font-weight-bold">'+(index+1)+ ". " +value.title+'</p><p class="color-grey small">'+value.description+'</p><p class="color-primary small font-weight-bold">Team: '+ team +'</p></div>');
-                // });
-                // $("#list").append('<hr><div class="col-12 small color-grey font-weight-bold">Проекти без команди</div>');
-                // $.each(non_active, function (index, value) {
-                //     let team = '';
-                //     for (let member of value.team) {
-                //         team = team + '<a href="https://t.me/'+ member.link +'">'+ member.name +'</a>, ';
-                //     }
-                //     team = team.substring(0, team.length -2);
-                //     $("#list").append('<div class="col-md-6 col-xs-12 p-5"><p class="color-primary font-weight-bold">'+(index+1)+ ". " +value.title+'</p><p class="color-grey small">'+value.description+'</p><p class="color-primary small font-weight-bold">Team: '+ team +'</p></div>');
-                // });
             }
         });
     });
