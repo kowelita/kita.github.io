@@ -7,19 +7,46 @@ $(window).on('load', function(){
             dataType: "json",
             success: function (result){
                 let data = $.parseJSON(JSON.stringify(result));
-                data.sort(function(a, b) {
-                    if (a.team.length < b.team.length) return 1;
-                    if (a.team.length > b.team.length) return -1;
-                    return 0;
-                });
+                let active = [];
+                let non_active = [];
                 $.each(data, function (index, value) {
-                    let team = '';
-                    for (let member of value.team) {
-                        team = team + '<a href="https://t.me/'+ member.link +'">'+ member.name +'</a>, ';
+                    if (value.team[0].name != "-") {
+                        let team = '';
+                        for (let member of value.team) {
+                            team = team + '<a href="https://t.me/'+ member.link +'">'+ member.name +'</a>, ';
+                        }
+                        team = team.substring(0, team.length -2);
+                        $("#list").append('<div class="col-md-6 col-xs-12 p-md-5 p-2 py-5"><p class="color-primary font-weight-bold">'+value.title+'</p><p class="color-grey small">'+value.description+'</p><p class="color-primary small font-weight-bold">Team: '+ team +'</p></div>');
                     }
-                    team = team.substring(0, team.length -2);
-                    $("#list").append('<div class="col-md-6 col-xs-12 p-5"><p class="color-primary font-weight-bold">'+(index+1)+ ". " +value.title+'</p><p class="color-grey small">'+value.description+'</p><p class="color-primary small font-weight-bold">Team: '+ team +'</p></div>');
                 });
+                $("#list").append('<hr><div class="col-12 color-grey font-weight-bold">Проекти без команди</div>');
+                $.each(data, function (index, value) {
+                    if (value.team[0].name == "-") {
+                        let team = '';
+                        for (let member of value.team) {
+                            team = team + '<a href="https://t.me/'+ member.link +'">'+ member.name +'</a>, ';
+                        }
+                        team = team.substring(0, team.length -2);
+                        $("#list").append('<div class="col-md-6 col-xs-12 p-md-5 p-2 py-5"><p class="color-primary font-weight-bold">'+value.title+'</p><p class="color-grey small">'+value.description+'</p><p class="color-primary small font-weight-bold">Team: '+ team +'</p></div>');
+                    }
+                });
+                // $.each(active, function (index, value) {
+                //     let team = '';
+                //     for (let member of value.team) {
+                //         team = team + '<a href="https://t.me/'+ member.link +'">'+ member.name +'</a>, ';
+                //     }
+                //     team = team.substring(0, team.length -2);
+                //     $("#list").append('<div class="col-md-6 col-xs-12 p-5"><p class="color-primary font-weight-bold">'+(index+1)+ ". " +value.title+'</p><p class="color-grey small">'+value.description+'</p><p class="color-primary small font-weight-bold">Team: '+ team +'</p></div>');
+                // });
+                // $("#list").append('<hr><div class="col-12 small color-grey font-weight-bold">Проекти без команди</div>');
+                // $.each(non_active, function (index, value) {
+                //     let team = '';
+                //     for (let member of value.team) {
+                //         team = team + '<a href="https://t.me/'+ member.link +'">'+ member.name +'</a>, ';
+                //     }
+                //     team = team.substring(0, team.length -2);
+                //     $("#list").append('<div class="col-md-6 col-xs-12 p-5"><p class="color-primary font-weight-bold">'+(index+1)+ ". " +value.title+'</p><p class="color-grey small">'+value.description+'</p><p class="color-primary small font-weight-bold">Team: '+ team +'</p></div>');
+                // });
             }
         });
     });
