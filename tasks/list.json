@@ -1,0 +1,96 @@
+[
+  {
+    "title": "Чат-бот Джарвіс",
+    "description": "-",
+    "team": [
+      {
+        "name": "Антон",
+        "link": "Axel_2lvl"
+      },
+      {
+        "name": "Lig4t ...",
+        "link": "Tanuk1"
+      }
+    ]
+  },
+  {
+    "title": "Голосовий бот",
+    "description": "Голосовий бот (як Сірі) на нейронці (щоб сам записував все, що ми йому подамо)",
+    "team": [
+      {
+        "name": "-",
+        "link": "kowelitalliance"
+      }
+    ]
+  },
+  {
+    "title": "Веб-версія додатку Мій Ковель",
+    "description": "-",
+    "team": [
+      {
+        "name": "frstshmn",
+        "link": "korenha"
+      }
+    ]
+  },
+  {
+    "title": "Додаток для навчальних закладів",
+    "description": "Додаток для навчальних закладів, а саме для учнів і студентів",
+    "team": [
+      {
+        "name": "-",
+        "link": "kowelitalliance"
+      }
+    ]
+  },
+  {
+    "title": "Трилогія гри \"Проект З\"",
+    "description": "-",
+    "team": [
+      {
+        "name": "-",
+        "link": "kowelitalliance"
+      }
+    ]
+  },
+  {
+    "title": "*Робототехніка* Дельта-борд",
+    "description": "(кому цікаво буде закіну фото скетчів)",
+    "team": [
+      {
+        "name": "-",
+        "link": "kowelitalliance"
+      }
+    ]
+  },
+  {
+    "title": "Автоматизована система перевірки записів із БД",
+    "description": "-",
+    "team": [
+      {
+        "name": "-",
+        "link": "kowelitalliance"
+      }
+    ]
+  },
+  {
+    "title": "Власна хостинг-система",
+    "description": "-",
+    "team": [
+      {
+        "name": "-",
+        "link": "kowelitalliance"
+      }
+    ]
+  },
+  {
+    "title": "Власна ОС на базі Лінукс",
+    "description": "(більше 5 людей треба)",
+    "team": [
+      {
+        "name": "-",
+        "link": "kowelitalliance"
+      }
+    ]
+  }
+]
