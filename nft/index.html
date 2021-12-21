@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .person {
+            /*background: url('assets/background/1.png') no-repeat;*/
+            display: flex;
+            flex-direction: column;
+        }
+        .head {
+            width: 320px;
+            height: 100px;
+        }
+        .body {
+            width: 320px;
+            height: 160px;
+        }
+        .foot {
+            width: 320px;
+            height: 160px;
+        }
+    </style>
+</head>
+<body>
+    <div class="person">
+        <img class="head">
+        <img class="body">
+        <img class="foot">
+    </div>
+    <button onclick="generate();">Generate</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        let total_head = 3;
+        let total_body = 3;
+        let total_foot = 3;
+        let total_background = 3;
+
+        $(".person").css('background', 'url("assets/background/' + Math.floor((Math.random() * total_background) + 1) + '.png") no-repeat');
+        $(".head").attr('src', 'assets/head/' + Math.floor((Math.random() * total_head) + 1) + '.png');
+        $(".body").attr('src', 'assets/body/' + Math.floor((Math.random() * total_body) + 1) + '.png');
+        $(".foot").attr('src', 'assets/foot/' + Math.floor((Math.random() * total_foot) + 1) + '.png');
+        function generate() {
+            $(".person").css('background', 'url("assets/background/' + Math.floor((Math.random() * total_background) + 1) + '.png") no-repeat');
+            $(".head").attr('src', 'assets/head/' + Math.floor((Math.random() * total_head) + 1) + '.png');
+            $(".body").attr('src', 'assets/body/' + Math.floor((Math.random() * total_body) + 1) + '.png');
+            $(".foot").attr('src', 'assets/foot/' + Math.floor((Math.random() * total_foot) + 1) + '.png');
+        }
+
+
+    </script>
+</body>
+</html>
