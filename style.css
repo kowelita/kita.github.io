@@ -10,6 +10,15 @@
     --light-grey-color: #DDD;
 }
 
+#space {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
 html {
     background: #000;
     overflow-y: overlay;
@@ -45,20 +54,20 @@ hr {
 ---------------------------------------*/
 
 .background-hero {
-    background-image: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url('https://media.giphy.com/media/MaThe6p8WAKbf9NDDM/source.gif');
-    --x: center;
-    --y: center;
-    background-position: var(--x) center;
-    background-size: cover;
-    overflow-x: hidden;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 300;
 }
 
 @media only screen and (max-width: 768px) {
     .background-hero {
-        background-image: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url('https://media.giphy.com/media/MaThe6p8WAKbf9NDDM/source.gif');
-        background-position: center center;
-        background-size: cover;
-        overflow-x: hidden;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position: absolute;
+        z-index: 300;
     }
 }
 
